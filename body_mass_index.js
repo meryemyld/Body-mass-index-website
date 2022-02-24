@@ -3,6 +3,12 @@ function calculate(){
     var height=document.getElementById("height").value;
     var body_index=(kilogram/(height*height*0.0001)).toFixed(1);
 
+    if (height=="" || kilogram ==""){
+        alert("Please fill the blanks")
+    }
+
+    else{
+
     if (body_index<18.5){
         document.getElementById("parag1").innerHTML =body_index + ' '+ "Underweight"
         document.getElementById("parag2").innerHTML="It means that you are not at the proper weight according to your height, you are weak. Weakness is a condition that poses a risk for certain diseases and is undesirable. In order for you to reach the appropriate weight for your height, you should eat a sufficient and balanced diet and take care of improving your eating habits."
@@ -28,5 +34,7 @@ function calculate(){
         document.getElementById("parag1").innerHTML =body_index + ' '+ "Morbid obese"
         document.getElementById("parag2").innerHTML= "Your body weight is too much according to your height, in other words, you are fat. Obesity  is a risk factor for cardiovascular diseases, diabetes, hypertension, etc. chronic diseases. It is very important for your health that you go down to normal weight by getting weak under the control of a doctor / dietitian by contacting a medical institution. Please, contact the health facility."
     }
+
+}
    
 }
